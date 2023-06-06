@@ -1,14 +1,13 @@
 //! Get rid of all props except 'children' and 'label'
+import { usePupContext } from '../Providers/pup-provider';
+
 export const Section = ({
   label, // do not delete
   children, // do not delete
-  onClickFavorited,
-  onClickUnfavorited,
-  onClickCreateDog,
-  showComponent,
-  favoriteDogCount,
-  unfavoriteDogCount,
 }) => {
+const { pupState, pupActions } = usePupContext();
+const { showComponent, favoriteDogCount, unfavoriteDogCount } = pupState;
+const { onClickFavorited, onClickUnfavorited, onClickCreateDog } = pupActions;
   return (
     <section>
       <div className="container-header">

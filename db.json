@@ -22,18 +22,18 @@
       "id": 9
     },
     {
-      "name": "Laurine",
-      "image": "/src/assets/corgi.png",
-      "description": "Sausages pfft Rolls navigating male",
-      "isFavorite": true,
-      "id": 18
-    },
-    {
       "name": "Jim",
       "description": "Jim is a dog, a very cute dog",
       "isFavorite": false,
       "image": "/src/assets/chihuahua.avif",
       "id": 20
+    },
+    {
+      "name": "Doggy",
+      "description": "Super Dog",
+      "isFavorite": true,
+      "image": "/src/assets/boxer.jpeg",
+      "id": 21
     }
   ]
 }

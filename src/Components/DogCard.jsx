@@ -10,7 +10,7 @@ export const DogCard = ({
 }) => {
   return (
     <div className="dog-card">
-      {/* Choose which button to show depending on if dog is a favorite */}
+      {/* Choose which button to show depending on if dog is a favorite */} 
       {isFavorite ? (
         <UnfavoriteButton
           onClick={() => {
