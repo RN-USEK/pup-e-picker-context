@@ -1,39 +1,144 @@
 {
   "dogs": [
     {
-      "name": "Cydney",
-      "image": "/src/assets/blue-heeler.png",
-      "description": "East Oro Bugatti South Supervisor Product cumbersome",
+      "name": "Mariano",
+      "image": "/src/assets/dalmation.png",
+      "description": "Virtual Agender architectures until Van",
+      "isFavorite": false,
+      "id": 0
+    },
+    {
+      "name": "Raquel",
+      "image": "/src/assets/chihuahua.avif",
+      "description": "Polestar Bedfordshire Account transparent Heights",
       "isFavorite": true,
+      "id": 1
+    },
+    {
+      "name": "Kristy",
+      "image": "/src/assets/corgi.png",
+      "description": "Electronic meh Global Cheese Manganese",
+      "isFavorite": true,
+      "id": 2
+    },
+    {
+      "name": "Cassidy",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "North vanadyl Granite system Personal quantify World",
+      "isFavorite": false,
+      "id": 3
+    },
+    {
+      "name": "Leila",
+      "image": "/src/assets/boxer.png",
+      "description": "Intersex Gasoline invoice Cis Rustic Montana Agent National",
+      "isFavorite": true,
+      "id": 4
+    },
+    {
+      "name": "Ollie",
+      "image": "/src/assets/dalmation.png",
+      "description": "male South Switzerland junk ampere",
+      "isFavorite": true,
+      "id": 5
+    },
+    {
+      "name": "Catherine",
+      "image": "/src/assets/dalmation.png",
+      "description": "Fish HEX distributed Chlorine New purple Southeast Bedfordshire",
+      "isFavorite": false,
       "id": 6
     },
     {
-      "name": "Jalon",
-      "image": "/src/assets/blue-heeler.png",
-      "description": "Innovative Money Tuna Palladium Handmade Tricycle versus black",
+      "name": "Amina",
+      "image": "/src/assets/chihuahua.avif",
+      "description": "snappy Kids discrete holder fuchsia port Account",
       "isFavorite": false,
       "id": 7
     },
     {
-      "name": "Juanita",
-      "image": "/src/assets/dalmation.png",
-      "description": "redefine online feed bus unaccountably Hybrid Turnpike",
+      "name": "Zackery",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "faithfully utilisation repellendus Swiss Rico Movies Car",
+      "isFavorite": true,
+      "id": 8
+    },
+    {
+      "name": "Kiera",
+      "image": "/src/assets/boxer.png",
+      "description": "Borer mint Cedi male Nihonium Oklahoma Administrator",
       "isFavorite": true,
       "id": 9
     },
     {
-      "name": "Jim",
-      "description": "Jim is a dog, a very cute dog",
-      "isFavorite": false,
-      "image": "/src/assets/chihuahua.avif",
-      "id": 20
+      "name": "Kelley",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "Northwest synthesize Implementation Electronics sievert likewise jubilantly",
+      "isFavorite": true,
+      "id": 10
     },
     {
-      "name": "Doggy",
-      "description": "Super Dog",
+      "name": "Kaitlyn",
+      "image": "/src/assets/boxer.png",
+      "description": "Northeast Florida McLaughlin light fuchsia technologies Wagon feed",
       "isFavorite": true,
-      "image": "/src/assets/boxer.jpeg",
-      "id": 21
+      "id": 11
+    },
+    {
+      "name": "Albina",
+      "image": "/src/assets/cowardly.png",
+      "description": "ut gleeful underneath connect initiatives Refined Shirt Copper",
+      "isFavorite": false,
+      "id": 12
+    },
+    {
+      "name": "Misty",
+      "image": "/src/assets/corgi.png",
+      "description": "Computer Berkshire navigating tape odyssey invoice magenta",
+      "isFavorite": false,
+      "id": 13
+    },
+    {
+      "name": "Keanu",
+      "image": "/src/assets/dalmation.png",
+      "description": "Sausages deposit olive Avon Montgomery Ireland Bromine invoice",
+      "isFavorite": false,
+      "id": 14
+    },
+    {
+      "name": "Hershel",
+      "image": "/src/assets/cowardly.png",
+      "description": "Sri Bentley incubate North strategy woman crunch",
+      "isFavorite": false,
+      "id": 15
+    },
+    {
+      "name": "Michelle",
+      "image": "/src/assets/corgi.png",
+      "description": "payment withdrawal circuit compress longboat program Bedfordshire including",
+      "isFavorite": true,
+      "id": 16
+    },
+    {
+      "name": "Rosalind",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "mobile however Soap Gasoline Division",
+      "isFavorite": true,
+      "id": 17
+    },
+    {
+      "name": "Jana",
+      "image": "/src/assets/corgi.png",
+      "description": "Hawaii Diesel card South generate North Incredible swift",
+      "isFavorite": true,
+      "id": 18
+    },
+    {
+      "name": "Gerhard",
+      "image": "/src/assets/boxer.png",
+      "description": "expedita Hybrid Sausages Rubber weed",
+      "isFavorite": true,
+      "id": 19
     }
   ]
 }

@@ -1,26 +1,26 @@
 import { FavoriteButton } from "./FavoriteButton";
 import { TrashButton } from "./TrashButton";
 import { UnfavoriteButton } from "./UnfavoriteButton";
+import { usePupContext } from '../Providers/pup-provider';
+
 // ! Do Not Make Changes To This File
 export const DogCard = ({
-  dog: { name, image, description, isFavorite },
-  onTrashIconClick,
-  onEmptyHeartClick,
-  onHeartClick,
+  dog: { name, image, description, isFavorite, id },
 }) => {
+  const { pupActions: {deleteDog, favoriteDog,unfavoriteDog} } = usePupContext();
   return (
     <div className="dog-card">
       {/* Choose which button to show depending on if dog is a favorite */} 
       {isFavorite ? (
         <UnfavoriteButton
           onClick={() => {
-            onHeartClick();
+            unfavoriteDog(id);
           }}
         />
       ) : (
         <FavoriteButton
           onClick={() => {
-            onEmptyHeartClick();
+            favoriteDog(id);
           }}
         />
       )}
@@ -28,7 +28,7 @@ export const DogCard = ({
       {/* Use this button to delete a puppy :( */}
       <TrashButton
         onClick={() => {
-          onTrashIconClick();
+          deleteDog(id);
         }}
       />
 

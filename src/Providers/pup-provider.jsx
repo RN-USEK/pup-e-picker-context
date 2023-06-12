@@ -8,13 +8,15 @@ const PupContext = React.createContext();
 export const PupProvider = ({ children }) => {
   const [showComponent, setShowComponent] = useState("all-dogs");
   const [dogs, setDogs] = useState([]);
-  const [favoriteDogCount, setFavoriteDogCount] = useState([]);
-  const [unfavoriteDogCount, setUnFavoriteDogCount] = useState([]);
+
+  const favoriteDogs = dogs.filter((dog) => dog.isFavorite);
+  const unfavoriteDogs = dogs.filter((dog) => !dog.isFavorite);
+  const favoriteDogCount = favoriteDogs.length;
+  const unfavoriteDogCount = unfavoriteDogs.length;
 
   useEffect(() => {
-    setFavoriteDogCount(dogs.filter((dog) => dog.isFavorite).length);
-    setUnFavoriteDogCount(dogs.filter((dog) => !dog.isFavorite).length);
-  }, [dogs]);
+    refetchDogs();
+  }, []);
 
   const refetchDogs = () => {
     fetch("http://localhost:3000/dogs")
@@ -46,43 +48,18 @@ export const PupProvider = ({ children }) => {
     updateFavoriteForDog({ dogId, isFavorite: true }).then(() => refetchDogs());
   };
 
-  const unfavorited = dogs.filter((dog) => dog.isFavorite === false);
-  const favorited = dogs.filter((dog) => dog.isFavorite === true);
+  const dogsData = {
+    'all-dogs': dogs,
+    'favorite-dogs': favoriteDogs,
+    'unfavorite-dogs': unfavoriteDogs,
+  }
 
-  let filteredDogs = (() => {
-    if (showComponent === "favorite-dogs") {
-      return favorited;
-    }
-
-    if (showComponent === "unfavorite-dogs") {
-      return unfavorited;
-    }
-    return dogs;
-  })();
-
-  const onClickFavorited = () => {
-    if (showComponent === "favorite-dogs") {
-      setShowComponent("all-dogs");
-    } else {
-      setShowComponent("favorite-dogs");
-    }
-  };
-
-  const onClickUnfavorited = () => {
-    if (showComponent === "unfavorite-dogs") {
-      setShowComponent("all-dogs");
-    } else {
-      setShowComponent("unfavorite-dogs");
-    }
-  };
-
-  const onClickCreateDog = () => {
-    if (showComponent === "create-dog-form") {
-      setShowComponent("all-dogs");
-    } else {
-      setShowComponent("create-dog-form");
-    }
-  };
+  const onClickSections = (name) => {
+    const modeValue = showComponent === name
+      ? 'all-dogs'
+      : name;
+    setShowComponent(modeValue);
+  }
 
   const pupActions = {
     refetchDogs,
@@ -90,14 +67,11 @@ export const PupProvider = ({ children }) => {
     deleteDog,
     unfavoriteDog,
     favoriteDog,
-    filteredDogs,
-    onClickFavorited,
-    onClickUnfavorited,
-    onClickCreateDog,
+    onClickSections,
   };
 
   return (
-    <PupContext.Provider value={{ pupState: { dogs,favoriteDogCount, unfavoriteDogCount, showComponent }, pupActions }}>
+    <PupContext.Provider value={{ pupState: { dogsData,favoriteDogCount, unfavoriteDogCount, showComponent }, pupActions }}>
       {children}
     </PupContext.Provider>
   );

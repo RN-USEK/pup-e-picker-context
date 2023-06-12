@@ -7,7 +7,7 @@ export const Section = ({
 }) => {
 const { pupState, pupActions } = usePupContext();
 const { showComponent, favoriteDogCount, unfavoriteDogCount } = pupState;
-const { onClickFavorited, onClickUnfavorited, onClickCreateDog } = pupActions;
+const { onClickSections } = pupActions;
   return (
     <section>
       <div className="container-header">
@@ -18,7 +18,7 @@ const { onClickFavorited, onClickUnfavorited, onClickCreateDog } = pupActions;
             className={`selector ${
               showComponent === "favorite-dogs" && "active"
             }`}
-            onClick={onClickFavorited}
+            onClick={()=> onClickSections("favorite-dogs")}
           >
             favorited ( {favoriteDogCount} )
           </div>
@@ -28,7 +28,7 @@ const { onClickFavorited, onClickUnfavorited, onClickCreateDog } = pupActions;
             className={`selector ${
               showComponent === "unfavorite-dogs" && "active"
             }`}
-            onClick={onClickUnfavorited}
+            onClick={()=> onClickSections("unfavorite-dogs")}
           >
             unfavorited ( {unfavoriteDogCount} )
           </div>
@@ -36,7 +36,7 @@ const { onClickFavorited, onClickUnfavorited, onClickCreateDog } = pupActions;
             className={`selector ${
               showComponent === "create-dog-form" && "active"
             }`}
-            onClick={onClickCreateDog}
+            onClick={()=> onClickSections("create-dog-form")}
           >
             create dog
           </div>
